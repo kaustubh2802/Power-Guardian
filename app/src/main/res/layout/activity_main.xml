@@ -1,57 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
+    <!-- Header Section -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/primaryColor"
         android:gravity="center"
-        >
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/powerImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="charging"
+            android:src="@drawable/baseline_power"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/batteryPercentageText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Battery Percentage"
-            android:textSize="18sp"
-            android:layout_gravity="center_horizontal"
-            android:padding="16dp"
-            android:layout_marginBottom="50dp"/>
+            android:layout_margin="5dp"
+            android:fontFamily="serif"
+            android:text="100%"
+            android:textColor="@color/accentColor"
+            android:textSize="70sp" />
+    </LinearLayout>
 
-
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Marquee Text Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/slogan" />
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/secondaryColor"
+        android:orientation="vertical"
+        android:padding="12dp">
 
+        <TextView
+            android:id="@+id/marqueeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="@string/slogan"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- Main Content Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/accentColor"
+        android:orientation="vertical"
+        android:padding="12dp">
 
         <TextView
             android:id="@+id/displayText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" " />
-    <SeekBar
-        android:id="@+id/batterySeekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:text="Battery Status"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-        android:max="100"
-       />
-<!--        android:thumb="@drawable/custom_thumb"-->
-<!--        android:progressDrawable="@drawable/custom_progress"-->
-    <Button
-        android:id="@+id/setButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Set" />
+        <SeekBar
+            android:id="@+id/batterySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:progressTint="@color/primaryColor"
+            android:thumbTint="@color/secondaryColor" />
+
+        <Button
+            android:id="@+id/setButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/primaryColor"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:text="Set"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Footer Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/primaryColor"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/exitImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:contentDescription="@string/exit_description"
+            android:src="@drawable/baseline_exit_to_app"
+            android:visibility="visible" />
+
+        <SeekBar
+            android:id="@+id/seek1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            android:progressDrawable="@drawable/custom_progress"
+            android:thumb="@drawable/transparent_thumb"
+
+              />
 
     </LinearLayout>
 

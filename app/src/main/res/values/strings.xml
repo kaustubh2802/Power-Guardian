@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Battery2</string>
     <string name="slogan">Smart Charging, Smart Living: Optimize Your Battery, One Percent at a Time</string>
+    <string name="exit_description">Don\'t Close application until You meet your needs.</string>
+
+
+
+
+
+    <string-array name="palette_array">
+        <item>Palette 1</item>
+        <item>Palette 2</item>
+        <item>Palette 3</item>
+        <item>Palette 4</item>
+        <item>Palette 5</item>
+        <item>Palette 6</item>
+    </string-array>
 </resources>
